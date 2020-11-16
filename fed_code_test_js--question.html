@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+
+      /*
+        The task: Refactor this function.
+
+        With this task, we want to understand your solution, so the code changes you made, why you made them, and code comments you would right to provide valuable insight for other developers.
+
+        In production, the function:
+         - Takes two arrays and returns a new array of unique values from both arrays
+         - Is called frequently in clientside code
+
+        The quality of the code should:
+         - Conform to ES6
+         - Be performant
+         - Be understandable
+         - Include appropriate comments.
+      */
+
+      function m (l1, l2) {
+        var u = [];
+        for (var i=0; i<l1.length; i++) {
+          u.push(l1[i]);
+        }
+        for (var j=0; j<l2.length; j++) {
+          var dupe = false;
+          for (var i=0; i<l1.length; i++) {
+            if (l1[i] === l2[j]) {
+              dupe = true;
+            }
+          }
+          if (!dupe) {
+            u.push(l2[j]);
+          }
+        }
+        return u;
+      }
+
+    </script>
+  </head>
+  <body />
+</html>
