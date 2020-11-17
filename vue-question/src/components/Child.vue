@@ -8,37 +8,40 @@ Properties:
 
 <template>
   <div class="child">
-    <h2>Child</h2>
+    <h2>Child test component</h2>
     <p>ID: {{ id }}</p>
-    <p>List: {{ list }}</p>
     <p>Description: {{ description }}</p>
   </div>
 </template>
 
 <script>
-// import list from './component/Parent.vue'
+import Parent from './components/Parent.vue'
 
 export default {
-  name: 'Child',
-  filters: {
-    description: function (value) {
-      console.log('test');
-    }
-  },
+  mounted() {
+    this.list;
+    this.listCount();
+  }, 
   props: {
     list: {
         type: Array,
         default: () => ["one", "two", "three" ]
-        }
-    },
+    }
+  },  
+  computed: {
+    listCount: function () {
+      let list = this.list;
+      return list.length();
+    }
+  },
   data () {
     return {
         id: 'feature',
-        description: "This list contains X items"
+        description: "This list contains " + listCount + " items"
       }
   },
-  // components: {
-  //   list
-  // }
+  components: {
+    Parent
+  }
 }
 </script>

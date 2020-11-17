@@ -17,7 +17,9 @@ Properties:
 export default {
   name: 'Parent',
   data () {
-    list: ["one", "two", "three" ]
+    return {
+      list: ["one", "two", "three" ]
+    }
   }
 }
 </script>
