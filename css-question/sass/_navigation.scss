@@ -1,0 +1,30 @@
+nav.menu {
+    background: $nav--menu-background;
+}
+
+.menu--main {
+    display: flex;
+    /* Modern browsers will use space-evenly but IE and older browsers will use fallback of space-around for graceful degradation */
+    justify-content: space-around;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint($desktop) {
+        justify-content: flex-end;
+    }
+
+    li {
+        background: $nav__list-item-background;
+        display: block;
+        flex: 0 1 50px;
+
+        .link {
+            background: $link--background;
+
+            .link__selected {
+                background: $link__selected;
+            }
+        }
+    }
+}
