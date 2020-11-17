@@ -15,15 +15,15 @@ nav.menu {
     }
 
     li {
-        background: $nav--list-item-background;
+        background: $nav__list-item-background;
         display: block;
         flex: 0 1 50px;
 
         .link {
             background: $link--background;
 
-            .selected {
-                background: $link--selected;
+            .link__selected {
+                background: $link__selected;
             }
         }
     }

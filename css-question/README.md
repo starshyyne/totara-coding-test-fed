@@ -9,3 +9,4 @@ Some notes:
 - Removed the `!important` from the selected class background colour. As `a.link.selected` is more specific than `a.link` 
 - Adjusted the `selected` selector to the correct selector
 - To reduce unnecessary specifity, the selectors `a.link` and `a.link.selected` have been simplified to `.link` and `.link.selected`. It could also have been reduced to `a` and `.selected` with the same results. 
+- Added `lang="en"` to the HTML tag for best practice, and a title to the page

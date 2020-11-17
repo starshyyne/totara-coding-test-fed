@@ -40,6 +40,6 @@ nav.menu {
   background: mintcream;
 }
 
-.menu--main li .link .selected {
+.menu--main li .link .link__selected {
   background: salmon;
 }
