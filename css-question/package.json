@@ -1,0 +1,27 @@
+{
+  "name": "totara-coding-test-fed",
+  "version": "1.0.0",
+  "description": "Laura Munro's soluction for the Totara coding test for front end developers CSS question",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp-plumber": "^1.2.1",
+    "breakpoint-sass": "^2.7.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "node-sass-globbing": "^0.0.23"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie 11",
+    "Safari 11.1"
+  ],
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starshyyne/totara-coding-test-fed.git"
+  },
+  "author": "Laura Munro"
+}

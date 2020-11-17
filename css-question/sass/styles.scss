@@ -1,0 +1,11 @@
+// Basic style reset
+body {
+    margin: 0;
+}
+
+// Import breakpoint-sass
+@import 'breakpoint';
+
+// Import partials
+@import 'variables';
+@import 'navigation';
