@@ -19,31 +19,43 @@
          - Use appropriate, accessible markup for its use as a menu
       */
 
-      div.menu {
+      nav.menu {
         background: chocolate;
       }
-      div.menu div {
+      .menu--main {
+        display: flex;
+        /* Modern browsers will use space-evenly but IE and older browsers will use fallback of space-around for graceful degradation */
+        justify-content: space-around;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+      }
+      .menu--main li {
         background: lime;
+        display: block;
+        flex: 0 1 50px;
       }
-      div.menu div.selected a.link {
-        background: salmon !important;
-      }
-      div.menu div a.link {
+      .menu--main li a.link {
         background: mintcream;
+      }
+      .menu--main li a.link.selected {
+        background: salmon; /* Removed !important - unneccessary */
       }
     </style>
   </head>
   <body>
-    <div class="menu">
-      <div>
-        <a href="#" class="link">x</a>
-      </div>
-      <div>
-        <a href="#" class="link selected">y</a>
-      </div>
-      <div>
-        <a href="#" class="link">z</a>
-      </div>
-    </div>
+    <nav class="menu" role="navigation" aria-label="Main menu">
+      <ul class="menu--main">
+        <li>
+          <a href="#" class="link">x</a>
+        </li>
+        <li>
+          <a href="#" class="link selected">y</a>
+        </li>
+        <li>
+          <a href="#" class="link">z</a>
+        </li>
+      </ul>
+    </nav>
   </body>
 </html>
