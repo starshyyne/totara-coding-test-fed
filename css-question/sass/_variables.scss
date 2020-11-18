@@ -1,6 +1,10 @@
 // Sizes
 
-$desktop: 1280px;
+// Spacing
+$spacing: 40px;
+
+// Breakpoints
+$tablet: 740px;
 
 // Colours
 
@@ -10,4 +14,7 @@ $nav__list-item-background: lime;
 
 // Menu -- links
 $link--background: mintcream;
-$link__selected: salmon;
+$link--colour: black;
+$link--hover-background: darkblue;
+$link--hover-colour: lavender;
+$link--selected: salmon;

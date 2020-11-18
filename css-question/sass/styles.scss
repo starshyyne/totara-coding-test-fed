@@ -3,7 +3,11 @@ body {
     margin: 0;
 }
 
-// Import breakpoint-sass
+* {
+    box-sizing: border-box;
+}
+
+// Import breakpoint-sass mixins
 @import 'breakpoint';
 
 // Import partials

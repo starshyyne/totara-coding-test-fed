@@ -3,27 +3,41 @@ nav.menu {
 }
 
 .menu--main {
-    display: flex;
-    /* Modern browsers will use space-evenly but IE and older browsers will use fallback of space-around for graceful degradation */
-    justify-content: space-around;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
 
-    @include breakpoint($desktop) {
-        justify-content: flex-end;
+    margin: 0;
+    padding: $spacing / 2 0;
+
+    @include breakpoint($tablet) {
+        display: flex;
+        /* Modern browsers will use space-evenly but IE and older browsers will use fallback of space-around for graceful degradation */
+        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     li {
         background: $nav__list-item-background;
         display: block;
-        flex: 0 1 50px;
+        padding: $spacing / 4;
 
         .link {
             background: $link--background;
+            display: inline-block;
+            padding: $spacing / 4;
+            color: $link--colour;
+            transition: 0.3s ease all;
+            width: 100%;
 
-            .link__selected {
-                background: $link__selected;
+            @include breakpoint($tablet) {
+                width: auto;
+            }
+
+            &.link--selected {
+                background: $link--selected;
+            }            
+            
+            &:hover {
+                color: $link--hover-colour;
+                background: $link--hover-background;
             }
         }
     }
