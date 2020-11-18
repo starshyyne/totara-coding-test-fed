@@ -16,7 +16,18 @@ Some notes:
 
 ## JavaScript Question
 
-TODO
+I started working on this question by first creating some simple tests to see how it was currently working, by adding some test arrays and printing their output of the function in the console.
+
+I understood the question to read "combine 2 arrays, excluding items which appear in both arrays" but upon doing some research into how others had solved the problem, I found that perhaps my understanding was wrong, and it should show all items in both arrays without duplicates, like in [this exercise](https://www.w3resource.com/javascript-exercises/javascript-array-exercise-42.php).
+
+My test showed the function was showing all values without duplicates, including those repeated. In assuming that the question is only asking for a refactor and not changing how it worked, I decided to try to optimise it only. 
+
+The first thing I tried was to convert the simple if statements on lines 39 and 44 into a ternary operator, but  didn't understand how to apply this in a for-loop. I suspect there may be a more optimal way to check for duplicates, but not sure how. 
+
+I inspected the ES6 solution in the exercise above, and from trying to unpack line-by-line it I can see it is using a  method of having 2 arrays and deleting duplicates, but I don't understand the notation and syntax to know whether it is more performant or not. 
+
+If I had more time, I would research more into JavaScript fundamentals, especially expressions, operators, statements and declarations. I would also do more research into ES6 specifications. As my experience with JavaScript is limited to creating simple interactivity, such as using onClick events, adding and removing classes, or DOM manipulation, working with arrays and loops is something I haven't learned yet. 
+
 
 ## Vue Question
 
