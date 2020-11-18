@@ -19,24 +19,52 @@
          - Include appropriate comments.
       */
 
-      function m (l1, l2) {
-        var u = [];
+      // Function assumes a flat array without nesting
+      // Can accept arrays with numbers or strings
+      // Updated name to something descriptive
+      function unique (l1, l2) {
+        // Create empty array
+        const u = [];
+        // For first array, take each item and push to array
         for (var i=0; i<l1.length; i++) {
           u.push(l1[i]);
         }
+        // For second array, iterate through each item
         for (var j=0; j<l2.length; j++) {
+          // Set default value of dupe to false 
           var dupe = false;
+          // For each item in second array, compare it to each item in first array
           for (var i=0; i<l1.length; i++) {
+            // If they are the same, mark it as duplicate
             if (l1[i] === l2[j]) {
               dupe = true;
             }
           }
+          // If it's not a duplicate, add to array
           if (!dupe) {
             u.push(l2[j]);
           }
         }
+        // After going through both arrays, return the array of unique values
         return u;
       }
+
+      // Test data
+      testArray1 = [1, 2, 3];
+      testArray2 = [3, 4, 500];
+      testArray3 = [4, 500, 6];
+
+      testArray4 = ["a", "b", "cat"];
+      testArray5 = ["cat", "d", "f"];
+
+      console.log(unique(testArray1, testArray2));
+      // Expected result: [1, 2, 3, 4, 500]
+
+      console.log(unique(testArray2, testArray3));
+      // Expected result: [3, 4, 500, 6]
+
+      console.log(unique(testArray4, testArray5));
+      // Expected result: [ "a", "b", "cat", "d", "f" ]
 
     </script>
   </head>
