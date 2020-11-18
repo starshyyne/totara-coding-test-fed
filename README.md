@@ -1,7 +1,8 @@
 # Totara coding test - front end developer
 
 Hello, here are my files and notes for the coding test.
-# CSS Question 
+
+## CSS Question 
 
 After downloading the repo, please open the file [fed_code_test_css--question.html](https://github.com/starshyyne/totara-coding-test-fed/blob/css-question/css-question/fed_code_test_css--question.html) in a web browser to view the completed test. I have added Gulp for simple Sass compiling.
 
